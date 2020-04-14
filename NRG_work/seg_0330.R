@@ -19,7 +19,7 @@ sapply(df, function(x) sum(is.na(x)))
 df$Weight <- 1
 
 # Gower distance
-gower_dist <- daisy(df[, -c(2:19)], metric = "gower")
+gower_dist <- daisy(df[, c(2:19)], metric = "gower")
 
 summary(gower_dist)
 
