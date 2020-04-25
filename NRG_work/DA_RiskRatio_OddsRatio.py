@@ -43,8 +43,9 @@ def mapping(x):
 df.iloc[:,2:] = df.iloc[:,2:].applymap(mapping)
 
 
-df[['QPOSTINT','Engaging host(s) ']].groupby(['QPOSTINT']).agg(['mean', 'count'])
 
+df[['QPOSTINT', 'Celebrity gossip ']].groupby(['QPOSTINT']).agg(['mean', 'count'])
+df[['QPOSTINT', 'Celebrity gossip ']].groupby(['Celebrity gossip ']).agg(['mean', 'count'])
 
 
 def rror(cols):
@@ -60,7 +61,7 @@ def rror(cols):
     OR = (a*d)/(b*c)
     return (RR, OR)
 
-rror(df[['QPOSTINT', 'Engaging host(s) ']])
+rror(df[['QPOSTINT', 'Celebrity gossip ']])
 
 
 
