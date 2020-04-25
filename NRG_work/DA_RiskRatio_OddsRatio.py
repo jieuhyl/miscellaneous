@@ -84,18 +84,17 @@ lst = rror(df.iloc[:,1:])
 
 sub = pd.DataFrame({"Attribute": df.iloc[:,2:].columns, 
                     "RR": [x[0] for x in lst],
-                    "RR_Index": [100*x[0] for x in lst]/np.mean([x[0] for x in lst]),
+                    "RR Index": [100*x[0] for x in lst]/np.mean([x[0] for x in lst]),
                     "OR": [x[1] for x in lst],
-                    "OR_Index": [100*x[1] for x in lst]/np.mean([x[1] for x in lst])}).sort_values(by='RR_Index', ascending=False)
+                    "OR Index": [100*x[1] for x in lst]/np.mean([x[1] for x in lst]),
+                    "Impact Index": ([100*x[0] for x in lst]/np.mean([x[0] for x in lst])+[100*x[1] for x in lst]/np.mean([x[1] for x in lst]))/2}).sort_values(by='Impact Index', ascending=False)
     
-sub.to_csv('C:/Users/Jie.Hu/Desktop/Driver Analysis/0420/DA_outputs_rror.csv', index=False)    
+sub.to_csv('C:/Users/Jie.Hu/Desktop/Driver Analysis/0420/DA_outputs_rror.csv', index=False)  
+ 
     
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
 
