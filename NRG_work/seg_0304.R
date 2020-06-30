@@ -44,13 +44,13 @@ plot(1:20, wcss, type='b',
 
 # apply to the data
 set.seed(1234)
-km3<- kmeans(df_seg[,-c(1)], 3, iter = 100, nstart = 10)
+km3<- kmeans(df_seg[, 2:23], 3, iter = 100, nstart = 10)
 df_seg$Cluster3 = km3$cluster
 
-km4 <- kmeans(df_seg[,-c(1)], 4, iter = 100, nstart = 10)
+km4 <- kmeans(df_seg[, 2:23], 4, iter = 100, nstart = 10)
 df_seg$Cluster4 = km4$cluster
 
-km5 <- kmeans(df_seg[,-c(1)], 5, iter = 100, nstart = 10)
+km5 <- kmeans(df_seg[, 2:23], 5, iter = 100, nstart = 10)
 df_seg$Cluster5 = km5$cluster
 
 
