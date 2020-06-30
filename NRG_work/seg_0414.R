@@ -39,25 +39,25 @@ plot(1:20, wcss, type='b',
 
 # apply to the data
 set.seed(1234)
-km3 <- kmeans(df_seg[,-c(1)], 3, iter = 100, nstart = 10)
+km3 <- kmeans(df_seg[, 2:35], 3, iter = 100, nstart = 10)
 df_seg$Cluster3 = km3$cluster
 
-km4 <- kmeans(df_seg[,-c(1)], 4, iter = 100, nstart = 10)
+km4 <- kmeans(df_seg[, 2:35], 4, iter = 100, nstart = 10)
 df_seg$Cluster4 = km4$cluster
 
-km5 <- kmeans(df_seg[,-c(1)], 5, iter = 100, nstart = 10)
+km5 <- kmeans(df_seg[, 2:35], 5, iter = 100, nstart = 10)
 df_seg$Cluster5 = km5$cluster
 
-km6 <- kmeans(df_seg[,-c(1)], 6, iter = 100, nstart = 10)
+km6 <- kmeans(df_seg[, 2:35], 6, iter = 100, nstart = 10)
 df_seg$Cluster6 = km6$cluster
 
-km7 <- kmeans(df_seg[,-c(1)], 7, iter = 100, nstart = 10)
+km7 <- kmeans(df_seg[, 2:35], 7, iter = 100, nstart = 10)
 df_seg$Cluster7 = km7$cluster
 
-km8 <- kmeans(df_seg[,-c(1)], 8, iter = 100, nstart = 10)
+km8 <- kmeans(df_seg[, 2:35], 8, iter = 100, nstart = 10)
 df_seg$Cluster8 = km8$cluster
 
-km9 <- kmeans(df_seg[,-c(1)], 9, iter = 100, nstart = 10)
+km9 <- kmeans(df_seg[, 2:35], 9, iter = 100, nstart = 10)
 df_seg$Cluster9 = km9$cluster
 
 
